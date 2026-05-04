@@ -3,29 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fes-Pro | Decision Maker</title>
+    <title>Fes-Pro | Smart Decision Maker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="card">
-        <header>
-            <h1>Fes-Pro</h1>
-            <p>Ma hubtaa go'aankaaga? Aan ku caawiyo!</p>
-        </header>
+    <div class="container">
+        <div id="regBox" class="card">
+            <div class="header-ui">
+                <span class="logo-icon">🚀</span>
+                <h2>Fes-Pro</h2>
+            </div>
+            <p>Diiwaangeli akoonkaaga si aad u bilowdo.</p>
+            <div class="form">
+                <input type="text" id="userName" placeholder="Magacaaga..." required>
+                <input type="email" id="userEmail" placeholder="Email-kaaga..." required>
+                <input type="password" id="userPass" placeholder="Password cusub..." required>
+                <button class="btn-main" onclick="registerUser()">Diiwaangeli</button>
+                <p class="forgot" onclick="resetEverything()">Ma ilowday Password? <span>Reset App</span></p>
+            </div>
+        </div>
 
-        <main>
-            <div class="input-group">
-                <input type="text" id="optionInput" placeholder="Ku qor ikhtiyaarkaaga halkan...">
-                <button id="addBtn" onclick="addOption()">Ku dar</button>
+        <div id="appBox" class="card" style="display: none;">
+            <header>
+                <h1 id="welcomeTitle">Soo dhawoow!</h1>
+                <p>Maxaan go'aan ka gaarnaa hadda?</p>
+            </header>
+
+            <div class="input-area">
+                <input type="text" id="optionInput" placeholder="Ku qor ikhtiyaar (tusaale: Jimicsi)...">
+                <button class="btn-circle" onclick="addOption()">+</button>
             </div>
 
             <ul id="optionList"></ul>
 
-            <button id="decideBtn" onclick="makeDecision()">Go'aan Qaado</button>
+            <button id="decideBtn" class="btn-main" onclick="makeDecision()">Go'aan Qaado</button>
             
             <div id="result"></div>
-        </main>
+            
+            <footer class="app-footer">
+                <button class="btn-link" onclick="logout()">Logout</button>
+            </footer>
+        </div>
     </div>
 
     <script src="script.js"></script>
