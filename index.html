@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fes-pro | Decision Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fes-Pro</h1>
+        <p>Ku qor xulashooyinkaaga hoos, ka dibna badanka riix.</p>
+        
+        <div class="input-area">
+            <input type="text" id="optionInput" placeholder="Tusaale: Akhris, Ciyaar, Hurdada...">
+            <button onclick="addOption()">Ku dar</button>
+        </div>
+
+        <ul id="optionList"></ul>
+
+        <button id="decideBtn" onclick="makeDecision()">Ii go'aami!</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
